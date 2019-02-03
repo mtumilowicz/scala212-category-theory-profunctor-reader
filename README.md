@@ -4,8 +4,6 @@ _Reference_: https://bartoszmilewski.com/2015/02/03/functoriality/
 _Reference_: https://bartoszmilewski.com/2016/07/25/profunctors-as-relations/
 
 # preface
-Please refer my other github project: 
-
 A **profunctor** is a functor that
 * is contravariant in its first argument (https://github.com/mtumilowicz/scala212-category-theory-contravariant-op-functor)
 * covariant in the second (covariant = ordinary functor)
@@ -26,12 +24,13 @@ Just like with `Bifunctor` (https://github.com/mtumilowicz/scala212-category-the
 we could either implement dimap (and accepting defaults for lmap
 and rmap), or implement lmap and rmap and accept default for dimap,
 or specify three of them, but assure that they are related in 
-proper way.
+a proper way.
 
 # hom-functor
 * hom-set `C(a, b)` is a set of morphisms between `a` and `b` 
 (in category `C`)
-* **hom-functor** takes a pair of objects a and b and assigns to it the set of morphisms between them, 
+* **hom-functor** takes a pair of objects `a` and `b` and assigns 
+to it the set of morphisms between them -  
 the hom-set `C(a, b)`
 * `Cop x C -> Set` (`C(a, b) e Set`)
 * we want to define its action on morphisms:
@@ -44,13 +43,16 @@ the hom-set `C(a, b)`
 # profunctor as relation
 
 ## relation
-* a relation between two sets is defined as a set of pairs
-* it’s a subset of the cartesian product of two sets
-*  function on the cartesian product of two sets - a function 
-that assigns zero (or false) to those pairs that are not in a relation, and one (or true) to those which are
+* a relation between two sets is a subset of the 
+cartesian product of two sets
+* or could be defined as a function on the cartesian 
+product of two sets - a function 
+that assigns zero (or false) to those pairs that are 
+not in a relation, and one (or true) to those which are
 
 ## intuition
-`Cop x D -> Set`
+* we will try to extend above reasoning to categories and profunctors
+* take declaration: `Cop x D -> Set`
 * why the target category is **Set**? 
     * because we can think of a
         relation as a function that assigns empty set if the relation
