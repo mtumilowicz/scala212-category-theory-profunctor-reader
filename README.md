@@ -28,6 +28,19 @@ and rmap), or implement lmap and rmap and accept default for dimap,
 or specify three of them, but assure that they are related in 
 proper way.
 
+# hom-functor
+* hom-set `C(a, b)` is a set of morphisms between `a` and `b` 
+(in category `C`)
+* **hom-functor** takes a pair of objects a and b and assigns to it the set of morphisms between them, 
+the hom-set `C(a, b)`
+* `Cop x C -> Set` (`C(a, b) c Set`)
+* we want to define its action on morphisms:
+    * morphism in `Cop x C` is a pair of morphisms
+        * `f: a' -> a`
+        * `g: b -> b'`
+    * take any `h e C(a, b)`, 
+    then `g . h . f e C(a', b')`
+
 # profunctor as relation
 
 # project description
