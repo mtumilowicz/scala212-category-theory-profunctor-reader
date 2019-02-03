@@ -77,6 +77,9 @@ not in a relation, and one (or true) to those which are
     * not empty hom-set means that there are (multiple) proof
     of relation
     
+## programming
+In programming we can think of declaration of profunctos as a
+`Setop x Set -> Set` (Hask without a bottom)
 
 # project description
 * haskell is extremely expressive
