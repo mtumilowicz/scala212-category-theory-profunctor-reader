@@ -59,6 +59,7 @@ not in a relation, and one (or true) to those which are
         does not exist and singleton if elements are related
     * observation: hom-set belongs to **Set**: `C(a, b) e Set`
     * example: consider preorder category then hom-set is either empty or is a singleton
+    * hom-functor in preorder is a good analogy of relation
 * why morphisms in the first argument are mapped contravariantly?
     * suppose we are in preorder category
     * suppose we have `Cop x C -> Set`
