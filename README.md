@@ -33,7 +33,7 @@ proper way.
 (in category `C`)
 * **hom-functor** takes a pair of objects a and b and assigns to it the set of morphisms between them, 
 the hom-set `C(a, b)`
-* `Cop x C -> Set` (`C(a, b) c Set`)
+* `Cop x C -> Set` (`C(a, b) e Set`)
 * we want to define its action on morphisms:
     * morphism in `Cop x C` is a pair of morphisms
         * `f: a' -> a`
@@ -42,6 +42,39 @@ the hom-set `C(a, b)`
     then `g . h . f e C(a', b')`
 
 # profunctor as relation
+
+## relation
+* a relation between two sets is defined as a set of pairs
+* it’s a subset of the cartesian product of two sets
+*  function on the cartesian product of two sets - a function 
+that assigns zero (or false) to those pairs that are not in a relation, and one (or true) to those which are
+
+## intuition
+`Cop x D -> Set`
+* why the target category is **Set**? 
+    * because we can think of a
+        relation as a function that assigns empty set if the relation
+        does not exist and singleton if elements are related
+    * hom-set belongs to **Set**: `C(a, b) e Set`
+    * consider preorder category -> hom-set is either empty or is a singleton
+        which has direct correspondence with above reasoning
+* why morphisms in the first argument are mapped contravariantly?
+    * suppose we are in preorder category
+    * suppose we have `Cop x C -> Set`
+    * take `a` and `b` and suppose `C(a, b)` is a singleton, so
+    we have single morphism `r: a -> b`
+    * take a morphism that goes from (a, b) to (a', b'), 
+    it is a pair of morphisms:
+        * `f: a' -> a`
+        * `g: b -> b'`
+    * the composition `g . r . f e C(a', b')`
+    * in case of `C x C -> Set` there will be no general way of
+    constructing morphism from `C(a', b')`
+* in general we can think about hom-set as a:
+    * empty hom-set always means that there is no relation
+    * not empty hom-set means that there are (multiple) proof
+    of relation
+    
 
 # project description
 * haskell is extremely expressive
