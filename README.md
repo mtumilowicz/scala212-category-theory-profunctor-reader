@@ -27,3 +27,24 @@ we could either implement dimap (and accepting defaults for lmap
 and rmap), or implement lmap and rmap and accept default for dimap,
 or specify three of them, but assure that they are related in 
 proper way.
+
+# profunctor as relation
+
+# project description
+* haskell is extremely expressive
+    ```
+    instance Profunctor (->) where
+      dimap ab cd bc = cd . bc . ab
+      lmap = flip (.)
+      rmap = (.)
+    ```
+* and here comes the Scala code
+    ```
+    trait Reader [R, A] extends (R => A) {
+      def dimap[C, D](f: A => D, g: C => R): Reader[C, D] = rmap(f).lmap(g)
+      
+      def rmap[B](f: A => B): Reader[R, B] = f.compose(this).apply
+      
+      def lmap[B](f: B => R): Reader[B, A] = this.compose(f).apply
+    }
+    ```
