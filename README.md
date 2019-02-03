@@ -75,8 +75,8 @@ not in a relation, and one (or true) to those which are
     constructing morphism from `C(a', b')`
 * in general we can think about hom-set as a:
     * empty hom-set always means that there is no relation
-    * not empty hom-set means that there are (multiple) proof
-    of relation
+    * not empty hom-set means that there are (multiple) proofs
+    of the relation
     
 ## programming
 In programming we can think of declaration of profunctos as a
