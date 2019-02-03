@@ -100,3 +100,22 @@ In programming we can think of declaration of profunctos as a
       def lmap[B](f: B => R): Reader[B, A] = this.compose(f).apply
     }
     ```
+* tests
+    * we have function counting list's size, and we want to modify 
+    it to accept `Set` and represent output as a string
+        ```
+        val sizer: Reader[List[String], Int] = _.size
+        
+        sizer.dimap(_.toString, (set: Set[String]) => set.toList).apply(Set()) should be("0")
+        sizer.dimap(_.toString, (set: Set[String]) => set.toList).apply(Set("a")) should be("1")
+        sizer.dimap(_.toString, (set: Set[String]) => set.toList).apply(Set("a", "b", "c")) should be("3")
+        ```
+    * we have predicate to check if a given int is even, and
+    we want to transform it to accept ints given as a string
+    and then represent output as a string
+        ```
+        val isEven: Reader[Int, Boolean] = _ % 2 == 0
+        
+        isEven.dimap(_.toString, (s: String) => s.toInt).apply("2") should be("true")
+        isEven.dimap(_.toString, (s: String) => s.toInt).apply("3") should be("false")
+        ```
