@@ -57,14 +57,14 @@ not in a relation, and one (or true) to those which are
     * because we can think of a
         relation as a function that assigns empty set if the relation
         does not exist and singleton if elements are related
-    * hom-set belongs to **Set**: `C(a, b) e Set`
-    * consider preorder category -> hom-set is either empty or is a singleton
-        which has direct correspondence with above reasoning
+    * observation: hom-set belongs to **Set**: `C(a, b) e Set`
+    * example: consider preorder category then hom-set is either empty or is a singleton
 * why morphisms in the first argument are mapped contravariantly?
     * suppose we are in preorder category
     * suppose we have `Cop x C -> Set`
     * take `a` and `b` and suppose `C(a, b)` is a singleton, so
     we have single morphism `r: a -> b`
+    * hom-set belongs to **Set**: `C(a, b) e Set`
     * take a morphism that goes from (a, b) to (a', b'), 
     it is a pair of morphisms:
         * `f: a' -> a`
