@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/mtumilowicz/scala212-category-theory-profunctor-reader.svg?branch=master)](https://travis-ci.com/mtumilowicz/scala212-category-theory-profunctor-reader)
+
 # scala212-category-theory-profunctor-reader
 _Reference_: https://ocharles.org.uk/blog/guest-posts/2013-12-22-24-days-of-hackage-profunctors.html  
 _Reference_: https://bartoszmilewski.com/2015/02/03/functoriality/  
