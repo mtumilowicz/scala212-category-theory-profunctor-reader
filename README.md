@@ -68,7 +68,7 @@ not in a relation, and one (or true) to those which are
     * take `a` and `b` and suppose `C(a, b)` is a singleton, so
     we have single morphism `r: a -> b`
     * hom-set belongs to **Set**: `C(a, b) e Set`
-    * take a morphism that goes from (a, b) to (a', b'), 
+    * take a morphism that goes from `(a, b)` to `(a', b')`, 
     it is a pair of morphisms:
         * `f: a' -> a`
         * `g: b -> b'`
