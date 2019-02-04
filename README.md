@@ -23,8 +23,8 @@ class Profunctor p where
 ```
 
 Just like with `Bifunctor` (https://github.com/mtumilowicz/scala212-category-theory-either-bifunctor)
-we could either implement dimap (and accepting defaults for lmap
-and rmap), or implement lmap and rmap and accept default for dimap,
+we could either implement `dimap` (and accepting defaults for `lmap`
+and `rmap`), or implement `lmap` and `rmap` and accept default for `dimap`,
 or specify three of them, but assure that they are related in 
 a proper way.
 
