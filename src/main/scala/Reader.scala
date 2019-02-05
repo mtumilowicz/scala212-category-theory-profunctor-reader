@@ -1,5 +1,3 @@
-import java.util.function.Function
-
 /**
   * Created by mtumilowicz on 2019-02-03.
   */
